@@ -41,7 +41,7 @@ QList<QPair<QString, QString>> IDatabase::getChatHistory(const QString &username
 {
     QList<QPair<QString, QString>> chatHistory;
 
-    // 打印调试信息，确认接收到的用户名
+    // 确认接收到的用户名
     qDebug() << "Fetching chat history for user: " << username;
 
     QSqlQuery query;

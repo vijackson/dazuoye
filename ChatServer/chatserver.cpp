@@ -26,7 +26,7 @@ void ChatServer::incomingConnection(qintptr socketDescriptor)
 
     m_clients.append(worker);
     emit logMessage("新的用户连接上了");
-    // // 将ServerWorker对象提交给线程池
+    // 将ServerWorker对象提交给线程池
     // QThreadPool::globalInstance()->start(worker);
 }
 

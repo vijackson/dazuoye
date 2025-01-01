@@ -222,7 +222,7 @@ void MainWindow::on_findChatHistoryButton_clicked()
     QList<QPair<QString, QString>> chatHistory = IDatabase::getInstance().getChatHistory(username);
 
     // 显示聊天记录
-    ui->roomTextEdit->clear();  // 清空当前显示的聊天记录
+    ui->roomTextEdit->clear();  // 清空当前显示聊天记录
     for (const auto &entry : chatHistory) {
         QString displayMessage = QString("%1 : %2").arg(entry.first).arg(entry.second);
         ui->roomTextEdit->append(displayMessage);  // 显示每条聊天记录
