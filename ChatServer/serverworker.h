@@ -15,7 +15,7 @@ public:
     QString userName();
     void setUserName(QString user);
     QTcpSocket* getSocket() ;
-    // 继承QRunnable的run方法，任务的执行入口
+    // 继承QRunnable的run方法任务的执行入口
     void run() override;
 
 signals:

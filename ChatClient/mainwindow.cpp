@@ -38,7 +38,7 @@ void MainWindow::on_loginButton_clicked()
         m_chatClient->connectToServer(QHostAddress(ui->serverEdit->text()),1967);
     }
     else {
-        // 登录失败，弹出提示
+        // 登录失败
         QMessageBox::warning(this, "登陆失败", "密码或用户名错误");
     }
     // 设置当前用户名
