@@ -29,7 +29,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_loginButton_clicked()
 {
     QString userName = ui->usernameEdit->text();
-    QString password = ui->passwordEdit->text();  // 假设你有一个密码输入框
+    QString password = ui->passwordEdit->text();
 
     // 使用数据库验证用户登录
     bool loginValid = IDatabase::getInstance().validateUserLogin(userName, password);

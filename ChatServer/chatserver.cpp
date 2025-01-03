@@ -30,7 +30,7 @@ void ChatServer::incomingConnection(qintptr socketDescriptor)
     // QThreadPool::globalInstance()->start(worker);
 }
 
-void ChatServer::broadcast(const QJsonObject &message, ServerWorker *exclude)
+void ChatServer::broadcast(const QJsonObject &message, ServerWorker *)
 {
     for(ServerWorker *worker:m_clients){
         worker->sendJson(message);
@@ -50,7 +50,7 @@ void ChatServer::jsonReceived(ServerWorker *sender, const QJsonObject &docObj)
         return;
 
     if (typeVal.toString().compare("message", Qt::CaseInsensitive) == 0) {
-        // 处理普通消息
+        // 处理一般消息
         const QJsonValue textVal = docObj.value("text");
         if (textVal.isNull() || !textVal.isString())
             return;
